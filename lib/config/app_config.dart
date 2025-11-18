@@ -1,16 +1,16 @@
 class AppConfig {
   // API Configuration - Change this to your backend URL
-  static const String baseUrl = 'http://localhost:3000/api';
+  static const String baseUrl = 'https://smart-attendance-backend1.onrender.com/api';
   // For production: 'https://your-backend.onrender.com/api'
   
   // Campus Configuration
-  static const double campusLatitude = 13.0827;
-  static const double campusLongitude = 80.2707;
-  static const double campusRadius = 150.0;
+  static const double campusLatitude = 13.032672;
+  static const double campusLongitude = 80.179273;
+  static const double campusRadius = 200.0;
   
   // WiFi Configuration
-  static const String campusWifiSSID = 'Campus-WiFi';
-  static const List<String> allowedSSIDs = ['Campus-WiFi', 'Campus-5G', 'Campus-Guest'];
+  static const String campusWifiSSID = 'EEC';
+  static const List<String> allowedSSIDs = ['EEC LIBRARY','CIVIL GALLERY HALL','Easwari Eng Collage','Easwari Eng College'];
   
   // App Configuration
   static const Duration sessionTimeout = Duration(days: 7);
@@ -25,23 +25,24 @@ class AppConfig {
   
   // Time Configuration
   static const Map<int, String> periods = {
-    1: '9:00 AM - 9:50 AM',
-    2: '10:00 AM - 10:50 AM',
-    3: '11:00 AM - 11:50 AM',
-    4: '12:00 PM - 12:50 PM',
-    5: '2:00 PM - 2:50 PM',
-    6: '3:00 PM - 3:50 PM',
-    7: '4:00 PM - 4:50 PM',
+    1: '08:15 AM - 9:05 AM',
+    2: '09:05 AM - 09:55 AM',
+    3: '10:10 AM - 11:00 AM',
+    4: '11:00 AM - 11:50 AM',
+    5: '11:50 AM - 12:40 PM',
+    6: '01:30 PM - 02:15 PM',
+    7: '02:15 PM - 03:00 PM',
+    8: '03:00 PM - 03:45 PM',
   };
   
   static const List<String> subjects = [
-    'Mathematics',
-    'Physics',
-    'Chemistry',
-    'Computer Science',
-    'English',
-    'Biology',
-    'History',
-    'Geography',
+    'DSA',
+    'DBMS',
+    'OS',
+    'Aptitude',
+    'Aptitude',
+    'OOP in Java',
+    'DSA',
+    'DCN',
   ];
 }
