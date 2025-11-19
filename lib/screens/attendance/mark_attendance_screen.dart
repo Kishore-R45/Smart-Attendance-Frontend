@@ -25,7 +25,7 @@ class _MarkAttendanceScreenState extends State<MarkAttendanceScreen> {
   String? _connectedSSID;
   double? _distanceFromCampus;
   
-  String _selectedSubject = 'Mathematics';
+  String _selectedSubject = 'DSA';
   int _selectedPeriod = 1;
 
   @override

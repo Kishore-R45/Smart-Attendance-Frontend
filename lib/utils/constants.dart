@@ -32,20 +32,14 @@ class AppConstants {
   
   // Subjects
   static const List<String> subjects = [
-    'Mathematics',
-    'Physics',
-    'Chemistry',
-    'Computer Science',
-    'Data Structures',
-    'Algorithms',
-    'Database Systems',
-    'Operating Systems',
-    'Computer Networks',
-    'Software Engineering',
-    'Web Development',
-    'Mobile Computing',
-    'Artificial Intelligence',
-    'Machine Learning',
+    'DSA',
+    'DBMS',
+    'OS',
+    'Aptitude',
+    'Aptitude',
+    'OOP in Java',
+    'DSA',
+    'DCN',
   ];
   
   // Attendance Status
@@ -59,13 +53,14 @@ class AppConstants {
   
   // Time Slots
   static const Map<int, Map<String, String>> timeSlots = {
-    1: {'start': '09:00', 'end': '09:50'},
-    2: {'start': '10:00', 'end': '10:50'},
-    3: {'start': '11:00', 'end': '11:50'},
-    4: {'start': '12:00', 'end': '12:50'},
-    5: {'start': '14:00', 'end': '14:50'},
-    6: {'start': '15:00', 'end': '15:50'},
-    7: {'start': '16:00', 'end': '16:50'},
+    1: {'start': '08:15', 'end': '09:05'},
+    2: {'start': '09:05', 'end': '09:55'},
+    3: {'start': '10:10', 'end': '11:00'},
+    4: {'start': '11:00', 'end': '11:50'},
+    5: {'start': '11:50', 'end': '12:40'},
+    6: {'start': '13:30', 'end': '14:15'},
+    7: {'start': '14:15', 'end': '15:00'},
+    8: {'start': '15:00', 'end': '15:45'},
   };
   
   // Validation Rules

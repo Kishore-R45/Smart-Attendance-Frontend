@@ -40,9 +40,9 @@ class AppConfig {
     'DBMS',
     'OS',
     'Aptitude',
-    'Aptitude',
+    'AIML',
     'OOP in Java',
-    'DSA',
+    'Ethical Hacking',
     'DCN',
   ];
 }

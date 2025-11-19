@@ -203,15 +203,16 @@ class Helpers {
 
   static int getCurrentPeriod() {
     final now = DateTime.now();
-    final currentMinutes = now.hour * 60 + now.minute;
+    final currentTime = now.hour * 60 + now.minute;
 
-    if (currentMinutes >= 540 && currentMinutes < 590) return 1;  // 9:00-9:50
-    if (currentMinutes >= 600 && currentMinutes < 650) return 2;  // 10:00-10:50
-    if (currentMinutes >= 660 && currentMinutes < 710) return 3;  // 11:00-11:50
-    if (currentMinutes >= 720 && currentMinutes < 770) return 4;  // 12:00-12:50
-    if (currentMinutes >= 840 && currentMinutes < 890) return 5;  // 14:00-14:50
-    if (currentMinutes >= 900 && currentMinutes < 950) return 6;  // 15:00-15:50
-    if (currentMinutes >= 960 && currentMinutes < 1010) return 7; // 16:00-16:50
+    if (currentTime >= 495 && currentTime < 545) return 1;  // 9:00-9:50
+    if (currentTime >= 545 && currentTime < 595) return 2;  // 10:00-10:50
+    if (currentTime >= 610 && currentTime < 660) return 3;  // 11:00-11:50
+    if (currentTime >= 660 && currentTime < 710) return 4;  // 12:00-12:50
+    if (currentTime >= 710 && currentTime < 760) return 5;  // 14:00-14:50
+    if (currentTime >= 810 && currentTime < 855) return 6;  // 15:00-15:50
+    if (currentTime >= 855 && currentTime < 900) return 7; // 16:00-16:50
+    if (currentTime >= 900 && currentTime < 945) return 8;
     
     return 0; // No active period
   }

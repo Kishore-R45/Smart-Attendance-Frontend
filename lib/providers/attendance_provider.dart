@@ -188,13 +188,14 @@ class AttendanceProvider extends ChangeNotifier {
     final now = DateTime.now();
     final currentTime = now.hour * 60 + now.minute;
 
-    if (currentTime >= 540 && currentTime < 590) return 1;  // 9:00-9:50
-    if (currentTime >= 600 && currentTime < 650) return 2;  // 10:00-10:50
-    if (currentTime >= 660 && currentTime < 710) return 3;  // 11:00-11:50
-    if (currentTime >= 720 && currentTime < 770) return 4;  // 12:00-12:50
-    if (currentTime >= 840 && currentTime < 890) return 5;  // 14:00-14:50
-    if (currentTime >= 900 && currentTime < 950) return 6;  // 15:00-15:50
-    if (currentTime >= 960 && currentTime < 1010) return 7; // 16:00-16:50
+    if (currentTime >= 495 && currentTime < 545) return 1;  // 9:00-9:50
+    if (currentTime >= 545 && currentTime < 595) return 2;  // 10:00-10:50
+    if (currentTime >= 610 && currentTime < 660) return 3;  // 11:00-11:50
+    if (currentTime >= 660 && currentTime < 710) return 4;  // 12:00-12:50
+    if (currentTime >= 710 && currentTime < 760) return 5;  // 14:00-14:50
+    if (currentTime >= 810 && currentTime < 855) return 6;  // 15:00-15:50
+    if (currentTime >= 855 && currentTime < 900) return 7; // 16:00-16:50
+    if (currentTime >= 900 && currentTime < 945) return 8;
     
     return 0; // No active period
   }

@@ -1,59 +1,61 @@
-plugins {
-    id("com.android.application")
-    id("kotlin-android")
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
-    id("dev.flutter.flutter-gradle-plugin")
-}
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-android {
-    namespace = "com.example.attendence_app"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+<uses-permission android:name="android.permission.INTERNET" />
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
+<!-- Location Permissions -->
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11.toString()
-    }
+<!-- WiFi Permissions -->
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.attendence_app"
-        // You can update the following values to match your application needs.
-        // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
-    }
+<!-- Device Info -->
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
-    buildTypes {
-        release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
-        }
-    }
-    defaultConfig {
-        applicationId "com.yourcompany.attendance_app"
-        minSdkVersion 21
-        targetSdkVersion 33
-        versionCode 1
-        versionName "1.0.0"
-    }
-    
-    buildTypes {
-        release {
-            signingConfig signingConfigs.release
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-}
+<application
+android:label="Smart Attendance App"
+android:name="${applicationName}"
+android:icon="@mipmap/ic_launcher">
 
-flutter {
-    source = "../.."
-}
+<!-- Maps API Key (optional) -->
+<meta-data
+android:name="com.google.android.geo.API_KEY"
+android:value="YOUR_GOOGLE_MAPS_API_KEY_OPTIONAL"/>
+
+<!-- ONLY ONE MAINACTIVITY — KEEP THIS ONE -->
+<activity
+android:name=".MainActivity"
+android:exported="true"
+android:launchMode="singleTop"
+android:theme="@style/LaunchTheme"
+android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+android:hardwareAccelerated="true"
+android:windowSoftInputMode="adjustResize">
+
+<meta-data
+android:name="io.flutter.embedding.android.NormalTheme"
+android:resource="@style/NormalTheme" />
+
+<intent-filter>
+<action android:name="android.intent.action.MAIN"/>
+<category android:name="android.intent.category.LAUNCHER"/>
+</intent-filter>
+</activity>
+
+<meta-data
+android:name="flutterEmbedding"
+android:value="2" />
+</application>
+
+<!-- Required by Flutter text processing -->
+<queries>
+<intent>
+<action android:name="android.intent.action.PROCESS_TEXT"/>
+<data android:mimeType="text/plain"/>
+</intent>
+</queries>
+
+</manifest>
