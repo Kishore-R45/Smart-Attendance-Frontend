@@ -60,7 +60,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     gradient: LinearGradient(
                       colors: [
                         Theme.of(context).primaryColor,
-                        Theme.of(context).primaryColor.withOpacity(0.7),
+                        Theme.of(context).primaryColor.withOpacity(0.8),
                       ],
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
@@ -152,7 +152,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       // Profile Details
                       Card(
                         child: Padding(
-                          padding: EdgeInsets.all(15),
+                          padding: EdgeInsets.all(14),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -162,7 +162,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   Text(
                                     'Personal Information',
                                     style: TextStyle(
-                                      fontSize: 18,
+                                      fontSize: 17,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
